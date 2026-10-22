@@ -1,0 +1,627 @@
+﻿<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Bootstrap primeiro, depois o style.css sobrescreve -->
+  <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- AOS (animações ao scroll) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <title>Transhub | Transportation HTML Template</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="./assets/images/logo.svg" alt="TransHub Logo" />
+      </a>
+      <button class="nav-toggler" id="navToggler" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbarNav">
+        <span class="toggler-line line-1"></span>
+        <span class="toggler-line line-2"></span>
+        <span class="toggler-line line-3"></span>
+      </button>
+      <div class="navbar-collapse-custom" id="navbarNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#inner-pages">Inner Pages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#feature">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#support">Support</a>
+          </li>
+        </ul>
+        <div class="button-buy">
+          <a href="" class="btn-custom">
+            <i class="fa-solid fa-cart-plus"></i>Buy Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="banner-section jarallax" data-jarallax data-speed="0.5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="banner-text text-center">
+            <h1 class="display-5">
+              TransHub <span>Transport</span> HTML Template
+            </h1>
+            <h2 class="sub-title d-none d-sm-block">
+              Designed for <span id="element"></span>
+            </h2>
+            <p>
+              Ideal for transport, logistics, cargo, freight forwarding,
+              shipping, warehouse management, courier services, and supply
+              chain businesses.
+            </p>
+            <div class="d-flex justify-content-center banner-icons">
+              <span><img src="./assets/images/html.png" alt="HTML5" /></span>
+              <span><img src="./assets/images/bootstrap.png" alt="Bootstrap" /></span>
+              <span><img src="./assets/images/sass.png" alt="Sass" /></span>
+              <span><img src="./assets/images/css.png" alt="CSS3" /></span>
+              <span><img src="./assets/images/js.png" alt="JavaScript" /></span>
+              <a href="#home-area" class="btn-custom">View Demos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="home-area section-padding" id="home-area">
+    <div class="container">
+      <div class="section-intro text-center">
+        <span class="section-badge">Our Demos</span>
+        <h2 class="section-title">Awesome Home <span>Demos</span></h2>
+        <p>
+          Choose from multiple stunning homepage layouts crafted for
+          transportation and logistics businesses.
+        </p>
+      </div>
+      <div class="swiper home-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="single-preview">
+              <a href="#">
+                <div class="preview-img">
+                  <img src="./assets/images/home1.jpg" alt="Home Demo 1" loading="lazy" />
+                  <div class="preview-overlay">
+                    <span class="preview-btn">
+                      <i class="fa-solid fa-eye"></i> Live Preview
+                    </span>
+                  </div>
+                </div>
+                <div class="preview-label">
+                  <span class="preview-number">01</span>
+                  <span class="preview-name">Classic Transport</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="single-preview">
+              <a href="#">
+                <div class="preview-img">
+                  <img src="./assets/images/home2.jpg" alt="Home Demo 2" loading="lazy" />
+                  <div class="preview-overlay">
+                    <span class="preview-btn">
+                      <i class="fa-solid fa-eye"></i> Live Preview
+                    </span>
+                  </div>
+                </div>
+                <div class="preview-label">
+                  <span class="preview-number">02</span>
+                  <span class="preview-name">Logistics Pro</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="single-preview">
+              <a href="#">
+                <div class="preview-img">
+                  <img src="./assets/images/home3.jpg" alt="Home Demo 3" loading="lazy" />
+                  <div class="preview-overlay">
+                    <span class="preview-btn">
+                      <i class="fa-solid fa-eye"></i> Live Preview
+                    </span>
+                  </div>
+                </div>
+                <div class="preview-label">
+                  <span class="preview-number">03</span>
+                  <span class="preview-name">Cargo Express</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="single-preview">
+              <a href="#">
+                <div class="preview-img">
+                  <img src="./assets/images/home4.jpg" alt="Home Demo 4" loading="lazy" />
+                  <div class="preview-overlay">
+                    <span class="preview-btn">
+                      <i class="fa-solid fa-eye"></i> Live Preview
+                    </span>
+                  </div>
+                </div>
+                <div class="preview-label">
+                  <span class="preview-number">04</span>
+                  <span class="preview-name">FreightHub Modern</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+  <section class="inner-pages grey-bg section-padding" id="inner-pages">
+    <div class="container">
+      <div class="section-intro text-center">
+        <span class="section-badge">Inner Pages</span>
+        <h2 class="section-title">Beautiful <span>Inner Pages</span></h2>
+        <p>Packed with <strong>40+</strong> beautifully designed inner pages, including Shop, Blog, and dedicated <strong>Tracking, Quote Request</strong> pages.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="single-preview">
+            <a href="./demo/about.html" target="_blank">
+              <div class="preview-img">
+                <img src="./assets/images/about.jpg" alt="About" loading="lazy" />
+                <div class="preview-overlay">
+                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
+                </div>
+              </div>
+              <div class="preview-label">
+                <span class="preview-number">01</span>
+                <span class="preview-name">About</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="single-preview">
+            <a href="./demo/services.html" target="_blank">
+              <div class="preview-img">
+                <img src="./assets/images/services.jpg" alt="Services" loading="lazy" />
+                <div class="preview-overlay">
+                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
+                </div>
+              </div>
+              <div class="preview-label">
+                <span class="preview-number">02</span>
+                <span class="preview-name">Services</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="single-preview">
+            <a href="./demo/single-service.html" target="_blank">
+              <div class="preview-img">
+                <img src="./assets/images/service-details.jpg" alt="Single Service" loading="lazy" />
+                <div class="preview-overlay">
+                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
+                </div>
+              </div>
+              <div class="preview-label">
+                <span class="preview-number">03</span>
+                <span class="preview-name">Single Service</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="single-preview">
+            <a href="./demo/tracking.html" target="_blank">
+              <div class="preview-img">
+                <img src="./assets/images/tracking.jpg" alt="Tracking" loading="lazy" />
+                <div class="preview-overlay">
+                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
+                </div>
+              </div>
+              <div class="preview-label">
+                <span class="preview-number">04</span>
+                <span class="preview-name">Tracking</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="single-preview">
+            <a href="./demo/team.html" target="_blank">
+              <div class="preview-img">
+                <img src="./assets/images/team.jpg" alt="Team" loading="lazy" />
+                <div class="preview-overlay">
+                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
+                </div>
+              </div>
+              <div class="preview-label">
+                <span class="preview-number">05</span>
+                <span class="preview-name">Team</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="single-preview">
+            <a href="./demo/single-team.html" target="_blank">
+              <div class="preview-img">
+                <img src="./assets/images/single-team.jpg" alt="Team Details" loading="lazy" />
+                <div class="preview-overlay">
+                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
+                </div>
+              </div>
+              <div class="preview-label">
+                <span class="preview-number">06</span>
+                <span class="preview-name">Team Details</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="single-preview">
+            <a href="./demo/blog.html" target="_blank">
+              <div class="preview-img">
+                <img src="./assets/images/blog.jpg" alt="Blog" loading="lazy" />
+                <div class="preview-overlay">
+                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
+                </div>
+              </div>
+              <div class="preview-label">
+                <span class="preview-number">07</span>
+                <span class="preview-name">Blog</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="single-preview">
+            <a href="./demo/pricing.html" target="_blank">
+              <div class="preview-img">
+                <img src="./assets/images/pricing.jpg" alt="Pricing" loading="lazy" />
+                <div class="preview-overlay">
+                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
+                </div>
+              </div>
+              <div class="preview-label">
+                <span class="preview-number">08</span>
+                <span class="preview-name">Pricing</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="single-preview">
+            <a href="./demo/faq.html" target="_blank">
+              <div class="preview-img">
+                <img src="./assets/images/faq.jpg" alt="FAQ" loading="lazy" />
+                <div class="preview-overlay">
+                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
+                </div>
+              </div>
+              <div class="preview-label">
+                <span class="preview-number">09</span>
+                <span class="preview-name">FAQ</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="single-preview">
+            <a href="./demo/contact.html" target="_blank">
+              <div class="preview-img">
+                <img src="./assets/images/contact.jpg" alt="Contact" loading="lazy" />
+                <div class="preview-overlay">
+                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
+                </div>
+              </div>
+              <div class="preview-label">
+                <span class="preview-number">10</span>
+                <span class="preview-name">Contact</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="single-preview">
+            <a href="./demo/quote.html" target="_blank">
+              <div class="preview-img">
+                <img src="./assets/images/quote.jpg" alt="Quote Request" loading="lazy" />
+                <div class="preview-overlay">
+                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
+                </div>
+              </div>
+              <div class="preview-label">
+                <span class="preview-number">11</span>
+                <span class="preview-name">Quote Request</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="single-preview inner-more">
+            <a href="./demo/index.html" target="_blank">
+              <div class="preview-img">
+                <img src="./assets/images/more.jpg" alt="More Pages" loading="lazy" />
+                <div class="preview-overlay">
+                  <span class="preview-btn"><i class="fa-solid fa-layer-group"></i> See All Pages</span>
+                </div>
+              </div>
+              <div class="preview-label">
+                <span class="preview-number">+</span>
+                <span class="preview-name">More Pages Inside</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div><!-- /.row -->
+    </div>
+  </section>
+  <section class="feature-area section-padding" id="feature">
+    <div class="container">
+      <div class="section-intro text-center" data-aos="fade-up">
+        <span class="section-badge">Why Choose Us</span>
+        <h2 class="section-title">Why Choose <span>Transhub?</span></h2>
+        <p>Featuring modern design, responsive layout, and customizable sections — built to deliver an exceptional user experience for every transport & logistics business.</p>
+      </div>
+      <div class="feature-stats row g-4 text-center mb-5" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <span class="stat-number" data-count="40">0</span><span class="stat-suffix">+</span>
+            <p class="stat-label">Inner Pages</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <span class="stat-number" data-count="95">0</span><span class="stat-suffix">+</span>
+            <p class="stat-label">Google Speed Score</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <span class="stat-number" data-count="12">0</span><span class="stat-suffix">+</span>
+            <p class="stat-label">Key Features</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <span class="stat-number" data-count="100">0</span><span class="stat-suffix">%</span>
+            <p class="stat-label">Responsive</p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="single-feature">
+            <span class="feature-icon cl-bootstrap"><i class="fab fa-bootstrap"></i></span>
+            <div class="feature-txt">
+              <h3 class="feature-heading">Latest Bootstrap 5</h3>
+              <p>Built with the free, open-source Bootstrap 5 front-end framework for solid, consistent layouts.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="single-feature">
+            <span class="feature-icon cl-speed"><i class="fa-solid fa-bolt"></i></span>
+            <div class="feature-txt">
+              <h3 class="feature-heading">95+ Google Page Speed</h3>
+              <p>Lean markup and lightweight code deliver a blazing-fast page speed score.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="single-feature">
+            <span class="feature-icon cl-sass"><i class="fab fa-sass"></i></span>
+            <div class="feature-txt">
+              <h3 class="feature-heading">Built with SASS</h3>
+              <p>Compiled with SASS, the powerful CSS preprocessor, for cleaner and more maintainable styles.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="single-feature">
+            <span class="feature-icon cl-html"><i class="fab fa-html5"></i></span>
+            <div class="feature-txt">
+              <h3 class="feature-heading">Valid HTML5 Markup</h3>
+              <p>Well-organised, commented and validated HTML5 code that's easy to understand and extend.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="single-feature">
+            <span class="feature-icon cl-gulp"><i class="fab fa-gulp"></i></span>
+            <div class="feature-txt">
+              <h3 class="feature-heading">Gulp Task Runner</h3>
+              <p>Powered by Gulp and Node.js for a smooth, automated development workflow.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="single-feature">
+            <span class="feature-icon cl-responsive"><i class="fa-solid fa-laptop"></i></span>
+            <div class="feature-txt">
+              <h3 class="feature-heading">Responsive Design</h3>
+              <p>100% responsive across all devices and screen sizes with full cross-browser support.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="single-feature">
+            <span class="feature-icon cl-font"><i class="fa-solid fa-font"></i></span>
+            <div class="feature-txt">
+              <h3 class="feature-heading">Google Fonts</h3>
+              <p>Uses free Google Fonts paired with Font Awesome icons for a clean, modern look.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="single-feature">
+            <span class="feature-icon cl-design"><i class="fa-solid fa-paint-roller"></i></span>
+            <div class="feature-txt">
+              <h3 class="feature-heading">Modern Vibrant Design</h3>
+              <p>Pixel-perfect layouts crafted following the latest web design trends and best practices.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="single-feature">
+            <span class="feature-icon cl-updates"><i class="fa-solid fa-arrows-rotate"></i></span>
+            <div class="feature-txt">
+              <h3 class="feature-heading">Free Updates</h3>
+              <p>Regular free updates to keep up with new design trends and user demands.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="single-feature">
+            <span class="feature-icon cl-seo"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <div class="feature-txt">
+              <h3 class="feature-heading">SEO Optimized</h3>
+              <p>Semantic markup and best-practice coding to ensure fast load times and SEO readiness.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="single-feature">
+            <span class="feature-icon cl-docs"><i class="fa-solid fa-book-open"></i></span>
+            <div class="feature-txt">
+              <h3 class="feature-heading">Well Documented</h3>
+              <p>Detailed technical documentation and professional support included with every purchase.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="single-feature">
+            <span class="feature-icon cl-custom"><i class="fa-solid fa-code"></i></span>
+            <div class="feature-txt">
+              <h3 class="feature-heading">Fully Customizable</h3>
+              <p>Limitless, beautiful UI components — adjust colors, layouts, and content with ease.</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.row -->
+    </div>
+  </section>
+  <footer id="support">
+    <div class="footer-cta jarallax" data-jarallax data-speed="0.4">
+      <div class="container">
+        <div class="footer-cta-inner text-center" data-aos="fade-up">
+          <span class="section-badge">Get Started</span>
+          <h2 class="display-5 fw-bolder text-white mt-3">
+            Impressed? Let's get <span class="text-warning">started</span> today!
+          </h2>
+          <p>Buy Transhub Template and join the theme-village family. Enjoy lifetime updates and free support.</p>
+          <a href="#" class="btn-custom mt-3">
+            <i class="fa-solid fa-cart-plus"></i> Buy Now
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-main">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+            <a href="index.html" class="footer-brand">
+              <img src="./assets/images/logo.svg" alt="TransHub Logo" />
+            </a>
+            <p class="footer-desc mt-3">
+              A modern, fully responsive HTML template built for transport, logistics, cargo, and supply chain businesses.
+            </p>
+            <div class="footer-socials mt-4">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+            <h5 class="footer-heading">Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#home-area">Demos</a></li>
+              <li><a href="#inner-pages">Inner Pages</a></li>
+              <li><a href="#feature">Features</a></li>
+              <li><a href="#support">Support</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+            <h5 class="footer-heading">Inner Pages</h5>
+            <ul class="footer-links">
+              <li><a href="./demo/about.html" target="_blank">About Us</a></li>
+              <li><a href="./demo/services.html" target="_blank">Services</a></li>
+              <li><a href="./demo/tracking.html" target="_blank">Tracking</a></li>
+              <li><a href="./demo/blog.html" target="_blank">Blog</a></li>
+              <li><a href="./demo/contact.html" target="_blank">Contact</a></li>
+              <li><a href="./demo/pricing.html" target="_blank">Pricing</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <h5 class="footer-heading">Get in Touch</h5>
+            <ul class="footer-contact">
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>123 Logistics Ave, Transport City, TC 10001</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <span>+1 (800) 123-4567</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <span>support@transhub.com</span>
+              </li>
+            </ul>
+          </div>
+        </div><!-- /.row -->
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
+          <p class="mb-0">&copy; <span id="footer-year"></span> TransHub. All Rights Reserved.</p>
+          <p class="mb-0">Designed &amp; Developed by <a href="#">Wcode - programy</a></p>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="./assets/js/bootstrap.bundle.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Jarallax (parallax) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/2.2.0/jarallax.min.js"></script>
+  <!-- Typed.js (efeito de digitação) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+  <!-- App JS -->
+  <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
