@@ -1,604 +1,756 @@
 ﻿<!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===================== SEO ===================== -->
+  <title>TransHub | Transportation &amp; Logistics HTML Template</title>
+  <meta name="description" content="TransHub is a modern, fully responsive HTML template built for transport, logistics, cargo, freight forwarding, and supply chain businesses. 40+ inner pages, Bootstrap 5, SASS." />
+  <meta name="keywords" content="transportation template, logistics HTML template, cargo website, freight forwarding, Bootstrap 5 template, responsive transport theme" />
+  <meta name="author" content="TransHub" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.transhub.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.transhub.com/" />
+  <meta property="og:title" content="TransHub | Transportation &amp; Logistics HTML Template" />
+  <meta property="og:description" content="A modern, fully responsive HTML template built for transport, logistics, cargo, and supply chain businesses. 40+ inner pages, Bootstrap 5, SASS." />
+  <meta property="og:image" content="https://www.transhub.com/assets/images/bg.jpg" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="TransHub" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TransHub | Transportation &amp; Logistics HTML Template" />
+  <meta name="twitter:description" content="Modern HTML template for transport and logistics businesses. Bootstrap 5, SASS, 40+ inner pages." />
+  <meta name="twitter:image" content="https://www.transhub.com/assets/images/bg.jpg" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "TransHub — Transportation & Logistics HTML Template",
+    "description": "A modern, fully responsive HTML template built for transport, logistics, cargo, and supply chain businesses.",
+    "url": "https://www.transhub.com/",
+    "image": "https://www.transhub.com/assets/images/bg.jpg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "TransHub",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.transhub.com/assets/images/logo.svg"
+      }
+    }
+  }
+  </script>
+
+  <!-- ===================== PERFORMANCE: preload LCP image ===================== -->
+  <link rel="preload" as="image" href="./assets/images/bg.jpg" fetchpriority="high" />
+
+  <!-- ===================== FONTS ===================== -->
+  <!-- Inter: preconnect already declared, font loads async via swap -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <!-- Bootstrap primeiro, depois o style.css sobrescreve -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome — only solid + brands subsets to reduce payload -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css" />
+
+  <!-- ===================== CSS — critical first, non-critical async ===================== -->
   <link rel="stylesheet" href="./assets/css/bootstrap.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <!-- AOS (animações ao scroll) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-  <title>Transhub | Transportation HTML Template</title>
+
+  <!-- Non-critical CSS loaded asynchronously (no render-block) -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  </noscript>
+
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  </noscript>
+
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="./assets/images/logo.svg" alt="TransHub Logo" />
-      </a>
-      <button class="nav-toggler" id="navToggler" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbarNav">
-        <span class="toggler-line line-1"></span>
-        <span class="toggler-line line-2"></span>
-        <span class="toggler-line line-3"></span>
-      </button>
-      <div class="navbar-collapse-custom" id="navbarNav">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#inner-pages">Inner Pages</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#feature">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#support">Support</a>
-          </li>
-        </ul>
-        <div class="button-buy">
-          <a href="" class="btn-custom">
-            <i class="fa-solid fa-cart-plus"></i>Buy Now
-          </a>
+<body id="top">
+
+  <!-- Skip to main content (accessibility) -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- =========================================
+       NAVBAR
+       ========================================= -->
+  <header role="banner">
+    <nav class="navbar navbar-expand-lg sticky-top" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" aria-label="TransHub — go to homepage">
+          <img src="./assets/images/logo.svg" alt="TransHub" width="140" height="40" />
+        </a>
+
+        <button class="nav-toggler" id="navToggler" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navbarNav" aria-haspopup="true">
+          <span class="toggler-line line-1"></span>
+          <span class="toggler-line line-2"></span>
+          <span class="toggler-line line-3"></span>
+        </button>
+
+        <div class="navbar-collapse-custom" id="navbarNav" aria-label="Navigation menu">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0" role="list">
+            <li class="nav-item" role="listitem">
+              <a class="nav-link active" aria-current="page" href="#top">Home</a>
+            </li>
+            <li class="nav-item" role="listitem">
+              <a class="nav-link" href="#inner-pages">Inner Pages</a>
+            </li>
+            <li class="nav-item" role="listitem">
+              <a class="nav-link" href="#feature">Features</a>
+            </li>
+            <li class="nav-item" role="listitem">
+              <a class="nav-link" href="#support">Support</a>
+            </li>
+          </ul>
+          <div class="button-buy">
+            <a href="#" class="btn-custom" aria-label="Buy TransHub template now">
+              <i class="fa-solid fa-cart-plus" aria-hidden="true"></i>
+              <span>Buy Now</span>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
-  <section class="banner-section jarallax" data-jarallax data-speed="0.5">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="banner-text text-center">
-            <h1 class="display-5">
-              TransHub <span>Transport</span> HTML Template
-            </h1>
-            <h2 class="sub-title d-none d-sm-block">
-              Designed for <span id="element"></span>
-            </h2>
-            <p>
-              Ideal for transport, logistics, cargo, freight forwarding,
-              shipping, warehouse management, courier services, and supply
-              chain businesses.
-            </p>
-            <div class="d-flex justify-content-center banner-icons">
-              <span><img src="./assets/images/html.png" alt="HTML5" /></span>
-              <span><img src="./assets/images/bootstrap.png" alt="Bootstrap" /></span>
-              <span><img src="./assets/images/sass.png" alt="Sass" /></span>
-              <span><img src="./assets/images/css.png" alt="CSS3" /></span>
-              <span><img src="./assets/images/js.png" alt="JavaScript" /></span>
-              <a href="#home-area" class="btn-custom">View Demos</a>
+    </nav>
+  </header>
+
+  <!-- =========================================
+       MAIN CONTENT
+       ========================================= -->
+  <main id="main-content">
+
+    <!-- =========================================
+         BANNER SECTION
+         ========================================= -->
+    <section class="banner-section jarallax" data-jarallax data-speed="0.5" aria-labelledby="banner-heading">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="banner-text text-center">
+              <h1 id="banner-heading" class="display-5">
+                TransHub <span>Transport</span> HTML Template
+              </h1>
+              <p class="sub-title d-none d-sm-block">
+                Designed for <span id="element" role="status" aria-live="polite" aria-atomic="true"></span>
+              </p>
+              <p>
+                Ideal for transport, logistics, cargo, freight forwarding,
+                shipping, warehouse management, courier services, and supply
+                chain businesses.
+              </p>
+              <div class="d-flex justify-content-center banner-icons" role="list" aria-label="Built with">
+                <span role="listitem"><img src="./assets/images/html.png" alt="HTML5" width="40" height="40" /></span>
+                <span role="listitem"><img src="./assets/images/bootstrap.png" alt="Bootstrap 5" width="40" height="40" /></span>
+                <span role="listitem"><img src="./assets/images/sass.png" alt="Sass" width="40" height="40" /></span>
+                <span role="listitem"><img src="./assets/images/css.png" alt="CSS3" width="40" height="40" /></span>
+                <span role="listitem"><img src="./assets/images/js.png" alt="JavaScript" width="40" height="40" /></span>
+                <a href="#home-area" class="btn-custom" aria-label="View template demos">
+                  <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                  <span>View Demos</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="home-area section-padding" id="home-area">
-    <div class="container">
-      <div class="section-intro text-center">
-        <span class="section-badge">Our Demos</span>
-        <h2 class="section-title">Awesome Home <span>Demos</span></h2>
-        <p>
-          Choose from multiple stunning homepage layouts crafted for
-          transportation and logistics businesses.
-        </p>
+    </section>
+
+    <!-- =========================================
+         HOME AREA — Demo Previews
+         ========================================= -->
+    <section class="home-area section-padding" id="home-area" aria-labelledby="home-area-heading">
+      <div class="container">
+        <div class="section-intro text-center">
+          <span class="section-badge" aria-hidden="true">Our Demos</span>
+          <h2 id="home-area-heading" class="section-title">Awesome Home <span>Demos</span></h2>
+          <p>
+            Choose from multiple stunning homepage layouts crafted for
+            transportation and logistics businesses.
+          </p>
+        </div>
+
+        <div class="swiper home-swiper" role="region" aria-label="Home demo previews slider" aria-roledescription="carousel">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="Slide 1 of 4">
+              <div class="single-preview">
+                <a href="#" aria-label="Live preview: Classic Transport demo">
+                  <div class="preview-img">
+                    <img src="./assets/images/home1.jpg" alt="Classic Transport homepage screenshot" loading="eager" width="600" height="400" />
+                    <div class="preview-overlay" aria-hidden="true">
+                      <span class="preview-btn"><i class="fa-solid fa-eye" aria-hidden="true"></i> Live Preview</span>
+                    </div>
+                  </div>
+                  <div class="preview-label">
+                    <span class="preview-number" aria-hidden="true">01</span>
+                    <span class="preview-name">Classic Transport</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="Slide 2 of 4">
+              <div class="single-preview">
+                <a href="#" aria-label="Live preview: Logistics Pro demo">
+                  <div class="preview-img">
+                    <img src="./assets/images/home2.jpg" alt="Logistics Pro homepage screenshot" loading="lazy" width="600" height="400" />
+                    <div class="preview-overlay" aria-hidden="true">
+                      <span class="preview-btn"><i class="fa-solid fa-eye" aria-hidden="true"></i> Live Preview</span>
+                    </div>
+                  </div>
+                  <div class="preview-label">
+                    <span class="preview-number" aria-hidden="true">02</span>
+                    <span class="preview-name">Logistics Pro</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="Slide 3 of 4">
+              <div class="single-preview">
+                <a href="#" aria-label="Live preview: Cargo Express demo">
+                  <div class="preview-img">
+                    <img src="./assets/images/home3.jpg" alt="Cargo Express homepage screenshot" loading="lazy" width="600" height="400" />
+                    <div class="preview-overlay" aria-hidden="true">
+                      <span class="preview-btn"><i class="fa-solid fa-eye" aria-hidden="true"></i> Live Preview</span>
+                    </div>
+                  </div>
+                  <div class="preview-label">
+                    <span class="preview-number" aria-hidden="true">03</span>
+                    <span class="preview-name">Cargo Express</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="Slide 4 of 4">
+              <div class="single-preview">
+                <a href="#" aria-label="Live preview: FreightHub Modern demo">
+                  <div class="preview-img">
+                    <img src="./assets/images/home4.jpg" alt="FreightHub Modern homepage screenshot" loading="lazy" width="600" height="400" />
+                    <div class="preview-overlay" aria-hidden="true">
+                      <span class="preview-btn"><i class="fa-solid fa-eye" aria-hidden="true"></i> Live Preview</span>
+                    </div>
+                  </div>
+                  <div class="preview-label">
+                    <span class="preview-number" aria-hidden="true">04</span>
+                    <span class="preview-name">FreightHub Modern</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <button class="swiper-button-prev" aria-label="Previous slide"></button>
+          <button class="swiper-button-next" aria-label="Next slide"></button>
+          <div class="swiper-pagination" role="group" aria-label="Slide navigation"></div>
+        </div>
       </div>
-      <div class="swiper home-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
+    </section>
+
+    <!-- =========================================
+         INNER PAGES
+         ========================================= -->
+    <section class="inner-pages grey-bg section-padding" id="inner-pages" aria-labelledby="inner-pages-heading">
+      <div class="container">
+        <div class="section-intro text-center">
+          <span class="section-badge" aria-hidden="true">Inner Pages</span>
+          <h2 id="inner-pages-heading" class="section-title">Beautiful <span>Inner Pages</span></h2>
+          <p>Packed with <strong>40+</strong> beautifully designed inner pages, including Shop, Blog, and dedicated <strong>Tracking, Quote Request</strong> pages.</p>
+        </div>
+
+        <div class="row g-4" role="list" aria-label="Inner page previews">
+
+          <div class="col-lg-3 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="0">
             <div class="single-preview">
-              <a href="#">
+              <a href="./demo/about.html" target="_blank" rel="noopener noreferrer" aria-label="Preview About page (opens in new tab)">
                 <div class="preview-img">
-                  <img src="./assets/images/home1.jpg" alt="Home Demo 1" loading="lazy" />
-                  <div class="preview-overlay">
-                    <span class="preview-btn">
-                      <i class="fa-solid fa-eye"></i> Live Preview
-                    </span>
+                  <img src="./assets/images/about.jpg" alt="About page screenshot" loading="lazy" width="400" height="280" />
+                  <div class="preview-overlay" aria-hidden="true">
+                    <span class="preview-btn"><i class="fa-solid fa-eye" aria-hidden="true"></i> Live Preview</span>
                   </div>
                 </div>
                 <div class="preview-label">
-                  <span class="preview-number">01</span>
-                  <span class="preview-name">Classic Transport</span>
+                  <span class="preview-number" aria-hidden="true">01</span>
+                  <span class="preview-name">About</span>
                 </div>
               </a>
             </div>
           </div>
-          <div class="swiper-slide">
+
+          <div class="col-lg-3 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="100">
             <div class="single-preview">
-              <a href="#">
+              <a href="./demo/services.html" target="_blank" rel="noopener noreferrer" aria-label="Preview Services page (opens in new tab)">
                 <div class="preview-img">
-                  <img src="./assets/images/home2.jpg" alt="Home Demo 2" loading="lazy" />
-                  <div class="preview-overlay">
-                    <span class="preview-btn">
-                      <i class="fa-solid fa-eye"></i> Live Preview
-                    </span>
+                  <img src="./assets/images/services.jpg" alt="Services page screenshot" loading="lazy" width="400" height="280" />
+                  <div class="preview-overlay" aria-hidden="true">
+                    <span class="preview-btn"><i class="fa-solid fa-eye" aria-hidden="true"></i> Live Preview</span>
                   </div>
                 </div>
                 <div class="preview-label">
-                  <span class="preview-number">02</span>
-                  <span class="preview-name">Logistics Pro</span>
+                  <span class="preview-number" aria-hidden="true">02</span>
+                  <span class="preview-name">Services</span>
                 </div>
               </a>
             </div>
           </div>
-          <div class="swiper-slide">
+
+          <div class="col-lg-3 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="200">
             <div class="single-preview">
-              <a href="#">
+              <a href="./demo/single-service.html" target="_blank" rel="noopener noreferrer" aria-label="Preview Single Service page (opens in new tab)">
                 <div class="preview-img">
-                  <img src="./assets/images/home3.jpg" alt="Home Demo 3" loading="lazy" />
-                  <div class="preview-overlay">
-                    <span class="preview-btn">
-                      <i class="fa-solid fa-eye"></i> Live Preview
-                    </span>
+                  <img src="./assets/images/service-details.jpg" alt="Single Service page screenshot" loading="lazy" width="400" height="280" />
+                  <div class="preview-overlay" aria-hidden="true">
+                    <span class="preview-btn"><i class="fa-solid fa-eye" aria-hidden="true"></i> Live Preview</span>
                   </div>
                 </div>
                 <div class="preview-label">
-                  <span class="preview-number">03</span>
-                  <span class="preview-name">Cargo Express</span>
+                  <span class="preview-number" aria-hidden="true">03</span>
+                  <span class="preview-name">Single Service</span>
                 </div>
               </a>
             </div>
           </div>
-          <div class="swiper-slide">
+
+          <div class="col-lg-3 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="300">
             <div class="single-preview">
-              <a href="#">
+              <a href="./demo/tracking.html" target="_blank" rel="noopener noreferrer" aria-label="Preview Tracking page (opens in new tab)">
                 <div class="preview-img">
-                  <img src="./assets/images/home4.jpg" alt="Home Demo 4" loading="lazy" />
-                  <div class="preview-overlay">
-                    <span class="preview-btn">
-                      <i class="fa-solid fa-eye"></i> Live Preview
-                    </span>
+                  <img src="./assets/images/tracking.jpg" alt="Tracking page screenshot" loading="lazy" width="400" height="280" />
+                  <div class="preview-overlay" aria-hidden="true">
+                    <span class="preview-btn"><i class="fa-solid fa-eye" aria-hidden="true"></i> Live Preview</span>
                   </div>
                 </div>
                 <div class="preview-label">
-                  <span class="preview-number">04</span>
-                  <span class="preview-name">FreightHub Modern</span>
+                  <span class="preview-number" aria-hidden="true">04</span>
+                  <span class="preview-name">Tracking</span>
                 </div>
               </a>
             </div>
           </div>
-        </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
+
+          <div class="col-lg-3 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="0">
+            <div class="single-preview">
+              <a href="./demo/team.html" target="_blank" rel="noopener noreferrer" aria-label="Preview Team page (opens in new tab)">
+                <div class="preview-img">
+                  <img src="./assets/images/team.jpg" alt="Team page screenshot" loading="lazy" width="400" height="280" />
+                  <div class="preview-overlay" aria-hidden="true">
+                    <span class="preview-btn"><i class="fa-solid fa-eye" aria-hidden="true"></i> Live Preview</span>
+                  </div>
+                </div>
+                <div class="preview-label">
+                  <span class="preview-number" aria-hidden="true">05</span>
+                  <span class="preview-name">Team</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="100">
+            <div class="single-preview">
+              <a href="./demo/single-team.html" target="_blank" rel="noopener noreferrer" aria-label="Preview Team Details page (opens in new tab)">
+                <div class="preview-img">
+                  <img src="./assets/images/single-team.jpg" alt="Team Details page screenshot" loading="lazy" width="400" height="280" />
+                  <div class="preview-overlay" aria-hidden="true">
+                    <span class="preview-btn"><i class="fa-solid fa-eye" aria-hidden="true"></i> Live Preview</span>
+                  </div>
+                </div>
+                <div class="preview-label">
+                  <span class="preview-number" aria-hidden="true">06</span>
+                  <span class="preview-name">Team Details</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="200">
+            <div class="single-preview">
+              <a href="./demo/blog.html" target="_blank" rel="noopener noreferrer" aria-label="Preview Blog page (opens in new tab)">
+                <div class="preview-img">
+                  <img src="./assets/images/blog.jpg" alt="Blog page screenshot" loading="lazy" width="400" height="280" />
+                  <div class="preview-overlay" aria-hidden="true">
+                    <span class="preview-btn"><i class="fa-solid fa-eye" aria-hidden="true"></i> Live Preview</span>
+                  </div>
+                </div>
+                <div class="preview-label">
+                  <span class="preview-number" aria-hidden="true">07</span>
+                  <span class="preview-name">Blog</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="300">
+            <div class="single-preview">
+              <a href="./demo/pricing.html" target="_blank" rel="noopener noreferrer" aria-label="Preview Pricing page (opens in new tab)">
+                <div class="preview-img">
+                  <img src="./assets/images/pricing.jpg" alt="Pricing page screenshot" loading="lazy" width="400" height="280" />
+                  <div class="preview-overlay" aria-hidden="true">
+                    <span class="preview-btn"><i class="fa-solid fa-eye" aria-hidden="true"></i> Live Preview</span>
+                  </div>
+                </div>
+                <div class="preview-label">
+                  <span class="preview-number" aria-hidden="true">08</span>
+                  <span class="preview-name">Pricing</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="0">
+            <div class="single-preview">
+              <a href="./demo/faq.html" target="_blank" rel="noopener noreferrer" aria-label="Preview FAQ page (opens in new tab)">
+                <div class="preview-img">
+                  <img src="./assets/images/faq.jpg" alt="FAQ page screenshot" loading="lazy" width="400" height="280" />
+                  <div class="preview-overlay" aria-hidden="true">
+                    <span class="preview-btn"><i class="fa-solid fa-eye" aria-hidden="true"></i> Live Preview</span>
+                  </div>
+                </div>
+                <div class="preview-label">
+                  <span class="preview-number" aria-hidden="true">09</span>
+                  <span class="preview-name">FAQ</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="100">
+            <div class="single-preview">
+              <a href="./demo/contact.html" target="_blank" rel="noopener noreferrer" aria-label="Preview Contact page (opens in new tab)">
+                <div class="preview-img">
+                  <img src="./assets/images/contact.jpg" alt="Contact page screenshot" loading="lazy" width="400" height="280" />
+                  <div class="preview-overlay" aria-hidden="true">
+                    <span class="preview-btn"><i class="fa-solid fa-eye" aria-hidden="true"></i> Live Preview</span>
+                  </div>
+                </div>
+                <div class="preview-label">
+                  <span class="preview-number" aria-hidden="true">10</span>
+                  <span class="preview-name">Contact</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="200">
+            <div class="single-preview">
+              <a href="./demo/quote.html" target="_blank" rel="noopener noreferrer" aria-label="Preview Quote Request page (opens in new tab)">
+                <div class="preview-img">
+                  <img src="./assets/images/quote.jpg" alt="Quote Request page screenshot" loading="lazy" width="400" height="280" />
+                  <div class="preview-overlay" aria-hidden="true">
+                    <span class="preview-btn"><i class="fa-solid fa-eye" aria-hidden="true"></i> Live Preview</span>
+                  </div>
+                </div>
+                <div class="preview-label">
+                  <span class="preview-number" aria-hidden="true">11</span>
+                  <span class="preview-name">Quote Request</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="300">
+            <div class="single-preview inner-more">
+              <a href="./demo/index.html" target="_blank" rel="noopener noreferrer" aria-label="See all inner pages (opens in new tab)">
+                <div class="preview-img">
+                  <img src="./assets/images/more.jpg" alt="More inner pages overview screenshot" loading="lazy" width="400" height="280" />
+                  <div class="preview-overlay" aria-hidden="true">
+                    <span class="preview-btn"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> See All Pages</span>
+                  </div>
+                </div>
+                <div class="preview-label">
+                  <span class="preview-number" aria-hidden="true">+</span>
+                  <span class="preview-name">More Pages Inside</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div><!-- /.row -->
       </div>
-    </div>
-  </section>
-  <section class="inner-pages grey-bg section-padding" id="inner-pages">
-    <div class="container">
-      <div class="section-intro text-center">
-        <span class="section-badge">Inner Pages</span>
-        <h2 class="section-title">Beautiful <span>Inner Pages</span></h2>
-        <p>Packed with <strong>40+</strong> beautifully designed inner pages, including Shop, Blog, and dedicated <strong>Tracking, Quote Request</strong> pages.</p>
-      </div>
-      <div class="row g-4">
-        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="0">
-          <div class="single-preview">
-            <a href="./demo/about.html" target="_blank">
-              <div class="preview-img">
-                <img src="./assets/images/about.jpg" alt="About" loading="lazy" />
-                <div class="preview-overlay">
-                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
-                </div>
-              </div>
-              <div class="preview-label">
-                <span class="preview-number">01</span>
-                <span class="preview-name">About</span>
-              </div>
-            </a>
-          </div>
+    </section>
+
+    <!-- =========================================
+         FEATURE AREA
+         ========================================= -->
+    <section class="feature-area section-padding" id="feature" aria-labelledby="feature-heading">
+      <div class="container">
+
+        <div class="section-intro text-center" data-aos="fade-up">
+          <span class="section-badge" aria-hidden="true">Why Choose Us</span>
+          <h2 id="feature-heading" class="section-title">Why Choose <span>Transhub?</span></h2>
+          <p>Featuring modern design, responsive layout, and customizable sections — built to deliver an exceptional user experience for every transport &amp; logistics business.</p>
         </div>
-        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="single-preview">
-            <a href="./demo/services.html" target="_blank">
-              <div class="preview-img">
-                <img src="./assets/images/services.jpg" alt="Services" loading="lazy" />
-                <div class="preview-overlay">
-                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
-                </div>
-              </div>
-              <div class="preview-label">
-                <span class="preview-number">02</span>
-                <span class="preview-name">Services</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="single-preview">
-            <a href="./demo/single-service.html" target="_blank">
-              <div class="preview-img">
-                <img src="./assets/images/service-details.jpg" alt="Single Service" loading="lazy" />
-                <div class="preview-overlay">
-                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
-                </div>
-              </div>
-              <div class="preview-label">
-                <span class="preview-number">03</span>
-                <span class="preview-name">Single Service</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="single-preview">
-            <a href="./demo/tracking.html" target="_blank">
-              <div class="preview-img">
-                <img src="./assets/images/tracking.jpg" alt="Tracking" loading="lazy" />
-                <div class="preview-overlay">
-                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
-                </div>
-              </div>
-              <div class="preview-label">
-                <span class="preview-number">04</span>
-                <span class="preview-name">Tracking</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="0">
-          <div class="single-preview">
-            <a href="./demo/team.html" target="_blank">
-              <div class="preview-img">
-                <img src="./assets/images/team.jpg" alt="Team" loading="lazy" />
-                <div class="preview-overlay">
-                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
-                </div>
-              </div>
-              <div class="preview-label">
-                <span class="preview-number">05</span>
-                <span class="preview-name">Team</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="single-preview">
-            <a href="./demo/single-team.html" target="_blank">
-              <div class="preview-img">
-                <img src="./assets/images/single-team.jpg" alt="Team Details" loading="lazy" />
-                <div class="preview-overlay">
-                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
-                </div>
-              </div>
-              <div class="preview-label">
-                <span class="preview-number">06</span>
-                <span class="preview-name">Team Details</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="single-preview">
-            <a href="./demo/blog.html" target="_blank">
-              <div class="preview-img">
-                <img src="./assets/images/blog.jpg" alt="Blog" loading="lazy" />
-                <div class="preview-overlay">
-                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
-                </div>
-              </div>
-              <div class="preview-label">
-                <span class="preview-number">07</span>
-                <span class="preview-name">Blog</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="single-preview">
-            <a href="./demo/pricing.html" target="_blank">
-              <div class="preview-img">
-                <img src="./assets/images/pricing.jpg" alt="Pricing" loading="lazy" />
-                <div class="preview-overlay">
-                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
-                </div>
-              </div>
-              <div class="preview-label">
-                <span class="preview-number">08</span>
-                <span class="preview-name">Pricing</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="0">
-          <div class="single-preview">
-            <a href="./demo/faq.html" target="_blank">
-              <div class="preview-img">
-                <img src="./assets/images/faq.jpg" alt="FAQ" loading="lazy" />
-                <div class="preview-overlay">
-                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
-                </div>
-              </div>
-              <div class="preview-label">
-                <span class="preview-number">09</span>
-                <span class="preview-name">FAQ</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="single-preview">
-            <a href="./demo/contact.html" target="_blank">
-              <div class="preview-img">
-                <img src="./assets/images/contact.jpg" alt="Contact" loading="lazy" />
-                <div class="preview-overlay">
-                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
-                </div>
-              </div>
-              <div class="preview-label">
-                <span class="preview-number">10</span>
-                <span class="preview-name">Contact</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="single-preview">
-            <a href="./demo/quote.html" target="_blank">
-              <div class="preview-img">
-                <img src="./assets/images/quote.jpg" alt="Quote Request" loading="lazy" />
-                <div class="preview-overlay">
-                  <span class="preview-btn"><i class="fa-solid fa-eye"></i> Live Preview</span>
-                </div>
-              </div>
-              <div class="preview-label">
-                <span class="preview-number">11</span>
-                <span class="preview-name">Quote Request</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="single-preview inner-more">
-            <a href="./demo/index.html" target="_blank">
-              <div class="preview-img">
-                <img src="./assets/images/more.jpg" alt="More Pages" loading="lazy" />
-                <div class="preview-overlay">
-                  <span class="preview-btn"><i class="fa-solid fa-layer-group"></i> See All Pages</span>
-                </div>
-              </div>
-              <div class="preview-label">
-                <span class="preview-number">+</span>
-                <span class="preview-name">More Pages Inside</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div><!-- /.row -->
-    </div>
-  </section>
-  <section class="feature-area section-padding" id="feature">
-    <div class="container">
-      <div class="section-intro text-center" data-aos="fade-up">
-        <span class="section-badge">Why Choose Us</span>
-        <h2 class="section-title">Why Choose <span>Transhub?</span></h2>
-        <p>Featuring modern design, responsive layout, and customizable sections — built to deliver an exceptional user experience for every transport & logistics business.</p>
-      </div>
-      <div class="feature-stats row g-4 text-center mb-5" data-aos="fade-up" data-aos-delay="100">
-        <div class="col-6 col-md-3">
-          <div class="stat-item">
-            <span class="stat-number" data-count="40">0</span><span class="stat-suffix">+</span>
-            <p class="stat-label">Inner Pages</p>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="stat-item">
-            <span class="stat-number" data-count="95">0</span><span class="stat-suffix">+</span>
-            <p class="stat-label">Google Speed Score</p>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="stat-item">
-            <span class="stat-number" data-count="12">0</span><span class="stat-suffix">+</span>
-            <p class="stat-label">Key Features</p>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="stat-item">
-            <span class="stat-number" data-count="100">0</span><span class="stat-suffix">%</span>
-            <p class="stat-label">Responsive</p>
-          </div>
-        </div>
-      </div>
-      <div class="row g-4">
-        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="0">
-          <div class="single-feature">
-            <span class="feature-icon cl-bootstrap"><i class="fab fa-bootstrap"></i></span>
-            <div class="feature-txt">
-              <h3 class="feature-heading">Latest Bootstrap 5</h3>
-              <p>Built with the free, open-source Bootstrap 5 front-end framework for solid, consistent layouts.</p>
+
+        <!-- Stats -->
+        <div class="feature-stats row g-4 text-center mb-5" data-aos="fade-up" data-aos-delay="100" role="list" aria-label="Key statistics">
+          <div class="col-6 col-md-3" role="listitem">
+            <div class="stat-item">
+              <span class="stat-number" data-count="40" aria-live="polite" aria-atomic="true" aria-label="40 or more inner pages">0</span><span class="stat-suffix" aria-hidden="true">+</span>
+              <p class="stat-label">Inner Pages</p>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="single-feature">
-            <span class="feature-icon cl-speed"><i class="fa-solid fa-bolt"></i></span>
-            <div class="feature-txt">
-              <h3 class="feature-heading">95+ Google Page Speed</h3>
-              <p>Lean markup and lightweight code deliver a blazing-fast page speed score.</p>
+          <div class="col-6 col-md-3" role="listitem">
+            <div class="stat-item">
+              <span class="stat-number" data-count="95" aria-live="polite" aria-atomic="true" aria-label="95 or higher Google page speed score">0</span><span class="stat-suffix" aria-hidden="true">+</span>
+              <p class="stat-label">Google Speed Score</p>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="single-feature">
-            <span class="feature-icon cl-sass"><i class="fab fa-sass"></i></span>
-            <div class="feature-txt">
-              <h3 class="feature-heading">Built with SASS</h3>
-              <p>Compiled with SASS, the powerful CSS preprocessor, for cleaner and more maintainable styles.</p>
+          <div class="col-6 col-md-3" role="listitem">
+            <div class="stat-item">
+              <span class="stat-number" data-count="12" aria-live="polite" aria-atomic="true" aria-label="12 or more key features">0</span><span class="stat-suffix" aria-hidden="true">+</span>
+              <p class="stat-label">Key Features</p>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="0">
-          <div class="single-feature">
-            <span class="feature-icon cl-html"><i class="fab fa-html5"></i></span>
-            <div class="feature-txt">
-              <h3 class="feature-heading">Valid HTML5 Markup</h3>
-              <p>Well-organised, commented and validated HTML5 code that's easy to understand and extend.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="single-feature">
-            <span class="feature-icon cl-gulp"><i class="fab fa-gulp"></i></span>
-            <div class="feature-txt">
-              <h3 class="feature-heading">Gulp Task Runner</h3>
-              <p>Powered by Gulp and Node.js for a smooth, automated development workflow.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="single-feature">
-            <span class="feature-icon cl-responsive"><i class="fa-solid fa-laptop"></i></span>
-            <div class="feature-txt">
-              <h3 class="feature-heading">Responsive Design</h3>
-              <p>100% responsive across all devices and screen sizes with full cross-browser support.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="0">
-          <div class="single-feature">
-            <span class="feature-icon cl-font"><i class="fa-solid fa-font"></i></span>
-            <div class="feature-txt">
-              <h3 class="feature-heading">Google Fonts</h3>
-              <p>Uses free Google Fonts paired with Font Awesome icons for a clean, modern look.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="single-feature">
-            <span class="feature-icon cl-design"><i class="fa-solid fa-paint-roller"></i></span>
-            <div class="feature-txt">
-              <h3 class="feature-heading">Modern Vibrant Design</h3>
-              <p>Pixel-perfect layouts crafted following the latest web design trends and best practices.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="single-feature">
-            <span class="feature-icon cl-updates"><i class="fa-solid fa-arrows-rotate"></i></span>
-            <div class="feature-txt">
-              <h3 class="feature-heading">Free Updates</h3>
-              <p>Regular free updates to keep up with new design trends and user demands.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="0">
-          <div class="single-feature">
-            <span class="feature-icon cl-seo"><i class="fa-solid fa-magnifying-glass"></i></span>
-            <div class="feature-txt">
-              <h3 class="feature-heading">SEO Optimized</h3>
-              <p>Semantic markup and best-practice coding to ensure fast load times and SEO readiness.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="single-feature">
-            <span class="feature-icon cl-docs"><i class="fa-solid fa-book-open"></i></span>
-            <div class="feature-txt">
-              <h3 class="feature-heading">Well Documented</h3>
-              <p>Detailed technical documentation and professional support included with every purchase.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="single-feature">
-            <span class="feature-icon cl-custom"><i class="fa-solid fa-code"></i></span>
-            <div class="feature-txt">
-              <h3 class="feature-heading">Fully Customizable</h3>
-              <p>Limitless, beautiful UI components — adjust colors, layouts, and content with ease.</p>
+          <div class="col-6 col-md-3" role="listitem">
+            <div class="stat-item">
+              <span class="stat-number" data-count="100" aria-live="polite" aria-atomic="true" aria-label="100 percent responsive">0</span><span class="stat-suffix" aria-hidden="true">%</span>
+              <p class="stat-label">Responsive</p>
             </div>
           </div>
         </div>
 
-      </div><!-- /.row -->
-    </div>
-  </section>
-  <footer id="support">
+        <!-- Feature cards -->
+        <div class="row g-4" role="list" aria-label="Template features">
+
+          <div class="col-lg-4 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="0">
+            <article class="single-feature">
+              <span class="feature-icon cl-bootstrap" aria-hidden="true"><i class="fab fa-bootstrap"></i></span>
+              <div class="feature-txt">
+                <h3 class="feature-heading">Latest Bootstrap 5</h3>
+                <p>Built with the free, open-source Bootstrap 5 front-end framework for solid, consistent layouts.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="100">
+            <article class="single-feature">
+              <span class="feature-icon cl-speed" aria-hidden="true"><i class="fa-solid fa-bolt"></i></span>
+              <div class="feature-txt">
+                <h3 class="feature-heading">95+ Google Page Speed</h3>
+                <p>Lean markup and lightweight code deliver a blazing-fast page speed score.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="200">
+            <article class="single-feature">
+              <span class="feature-icon cl-sass" aria-hidden="true"><i class="fab fa-sass"></i></span>
+              <div class="feature-txt">
+                <h3 class="feature-heading">Built with SASS</h3>
+                <p>Compiled with SASS, the powerful CSS preprocessor, for cleaner and more maintainable styles.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="0">
+            <article class="single-feature">
+              <span class="feature-icon cl-html" aria-hidden="true"><i class="fab fa-html5"></i></span>
+              <div class="feature-txt">
+                <h3 class="feature-heading">Valid HTML5 Markup</h3>
+                <p>Well-organised, commented and validated HTML5 code that's easy to understand and extend.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="100">
+            <article class="single-feature">
+              <span class="feature-icon cl-gulp" aria-hidden="true"><i class="fab fa-gulp"></i></span>
+              <div class="feature-txt">
+                <h3 class="feature-heading">Gulp Task Runner</h3>
+                <p>Powered by Gulp and Node.js for a smooth, automated development workflow.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="200">
+            <article class="single-feature">
+              <span class="feature-icon cl-responsive" aria-hidden="true"><i class="fa-solid fa-laptop"></i></span>
+              <div class="feature-txt">
+                <h3 class="feature-heading">Responsive Design</h3>
+                <p>100% responsive across all devices and screen sizes with full cross-browser support.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="0">
+            <article class="single-feature">
+              <span class="feature-icon cl-font" aria-hidden="true"><i class="fa-solid fa-font"></i></span>
+              <div class="feature-txt">
+                <h3 class="feature-heading">Google Fonts</h3>
+                <p>Uses free Google Fonts paired with Font Awesome icons for a clean, modern look.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="100">
+            <article class="single-feature">
+              <span class="feature-icon cl-design" aria-hidden="true"><i class="fa-solid fa-paint-roller"></i></span>
+              <div class="feature-txt">
+                <h3 class="feature-heading">Modern Vibrant Design</h3>
+                <p>Pixel-perfect layouts crafted following the latest web design trends and best practices.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="200">
+            <article class="single-feature">
+              <span class="feature-icon cl-updates" aria-hidden="true"><i class="fa-solid fa-arrows-rotate"></i></span>
+              <div class="feature-txt">
+                <h3 class="feature-heading">Free Updates</h3>
+                <p>Regular free updates to keep up with new design trends and user demands.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="0">
+            <article class="single-feature">
+              <span class="feature-icon cl-seo" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+              <div class="feature-txt">
+                <h3 class="feature-heading">SEO Optimized</h3>
+                <p>Semantic markup and best-practice coding to ensure fast load times and SEO readiness.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="100">
+            <article class="single-feature">
+              <span class="feature-icon cl-docs" aria-hidden="true"><i class="fa-solid fa-book-open"></i></span>
+              <div class="feature-txt">
+                <h3 class="feature-heading">Well Documented</h3>
+                <p>Detailed technical documentation and professional support included with every purchase.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-sm-6" role="listitem" data-aos="fade-up" data-aos-delay="200">
+            <article class="single-feature">
+              <span class="feature-icon cl-custom" aria-hidden="true"><i class="fa-solid fa-code"></i></span>
+              <div class="feature-txt">
+                <h3 class="feature-heading">Fully Customizable</h3>
+                <p>Limitless, beautiful UI components — adjust colors, layouts, and content with ease.</p>
+              </div>
+            </article>
+          </div>
+
+        </div><!-- /.row -->
+      </div>
+    </section>
+
+  </main><!-- /#main-content -->
+
+  <!-- =========================================
+       FOOTER / SUPPORT
+       ========================================= -->
+  <footer id="support" role="contentinfo">
+
+    <!-- CTA strip -->
     <div class="footer-cta jarallax" data-jarallax data-speed="0.4">
       <div class="container">
         <div class="footer-cta-inner text-center" data-aos="fade-up">
-          <span class="section-badge">Get Started</span>
+          <span class="section-badge" aria-hidden="true">Get Started</span>
           <h2 class="display-5 fw-bolder text-white mt-3">
             Impressed? Let's get <span class="text-warning">started</span> today!
           </h2>
           <p>Buy Transhub Template and join the theme-village family. Enjoy lifetime updates and free support.</p>
-          <a href="#" class="btn-custom mt-3">
-            <i class="fa-solid fa-cart-plus"></i> Buy Now
+          <a href="#" class="btn-custom mt-3" aria-label="Buy TransHub template">
+            <i class="fa-solid fa-cart-plus" aria-hidden="true"></i>
+            <span>Buy Now</span>
           </a>
         </div>
       </div>
     </div>
+
+    <!-- Footer main -->
     <div class="footer-main">
       <div class="container">
         <div class="row g-5">
+
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
-            <a href="index.html" class="footer-brand">
-              <img src="./assets/images/logo.svg" alt="TransHub Logo" />
+            <a href="index.html" class="footer-brand" aria-label="TransHub — go to homepage">
+              <img src="./assets/images/logo.svg" alt="TransHub" width="140" height="40" />
             </a>
             <p class="footer-desc mt-3">
               A modern, fully responsive HTML template built for transport, logistics, cargo, and supply chain businesses.
             </p>
-            <div class="footer-socials mt-4">
-              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
-              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            </div>
+            <nav class="footer-socials mt-4" aria-label="Social media links">
+              <a href="#" aria-label="Follow TransHub on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+              <a href="#" aria-label="Follow TransHub on Twitter / X"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
+              <a href="#" aria-label="Follow TransHub on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+              <a href="#" aria-label="Follow TransHub on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+              <a href="#" aria-label="Subscribe to TransHub on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+            </nav>
           </div>
+
           <div class="col-lg-2 col-md-6 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-            <h5 class="footer-heading">Quick Links</h5>
-            <ul class="footer-links">
-              <li><a href="#">Home</a></li>
-              <li><a href="#home-area">Demos</a></li>
-              <li><a href="#inner-pages">Inner Pages</a></li>
-              <li><a href="#feature">Features</a></li>
-              <li><a href="#support">Support</a></li>
-            </ul>
+            <h3 class="footer-heading">Quick Links</h3>
+            <nav aria-labelledby="footer-quicklinks-heading">
+              <ul class="footer-links" role="list">
+                <li><a href="#top">Home</a></li>
+                <li><a href="#home-area">Demos</a></li>
+                <li><a href="#inner-pages">Inner Pages</a></li>
+                <li><a href="#feature">Features</a></li>
+                <li><a href="#support">Support</a></li>
+              </ul>
+            </nav>
           </div>
+
           <div class="col-lg-3 col-md-6 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-            <h5 class="footer-heading">Inner Pages</h5>
-            <ul class="footer-links">
-              <li><a href="./demo/about.html" target="_blank">About Us</a></li>
-              <li><a href="./demo/services.html" target="_blank">Services</a></li>
-              <li><a href="./demo/tracking.html" target="_blank">Tracking</a></li>
-              <li><a href="./demo/blog.html" target="_blank">Blog</a></li>
-              <li><a href="./demo/contact.html" target="_blank">Contact</a></li>
-              <li><a href="./demo/pricing.html" target="_blank">Pricing</a></li>
-            </ul>
+            <h3 class="footer-heading">Inner Pages</h3>
+            <nav aria-labelledby="footer-innerpages-heading">
+              <ul class="footer-links" role="list">
+                <li><a href="./demo/about.html" target="_blank" rel="noopener noreferrer">About Us <span class="sr-only">(opens in new tab)</span></a></li>
+                <li><a href="./demo/services.html" target="_blank" rel="noopener noreferrer">Services <span class="sr-only">(opens in new tab)</span></a></li>
+                <li><a href="./demo/tracking.html" target="_blank" rel="noopener noreferrer">Tracking <span class="sr-only">(opens in new tab)</span></a></li>
+                <li><a href="./demo/blog.html" target="_blank" rel="noopener noreferrer">Blog <span class="sr-only">(opens in new tab)</span></a></li>
+                <li><a href="./demo/contact.html" target="_blank" rel="noopener noreferrer">Contact <span class="sr-only">(opens in new tab)</span></a></li>
+                <li><a href="./demo/pricing.html" target="_blank" rel="noopener noreferrer">Pricing <span class="sr-only">(opens in new tab)</span></a></li>
+              </ul>
+            </nav>
           </div>
+
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <h5 class="footer-heading">Get in Touch</h5>
-            <ul class="footer-contact">
-              <li>
-                <i class="fa-solid fa-location-dot"></i>
-                <span>123 Logistics Ave, Transport City, TC 10001</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-phone"></i>
-                <span>+1 (800) 123-4567</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-envelope"></i>
-                <span>support@transhub.com</span>
-              </li>
-            </ul>
+            <h3 class="footer-heading">Get in Touch</h3>
+            <address>
+              <ul class="footer-contact" role="list">
+                <li>
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  <span>123 Logistics Ave, Transport City, TC 10001</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                  <a href="tel:+18001234567">+1 (800) 123-4567</a>
+                </li>
+                <li>
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                  <a href="mailto:support@transhub.com">support@transhub.com</a>
+                </li>
+              </ul>
+            </address>
           </div>
+
         </div><!-- /.row -->
       </div>
     </div>
+
+    <!-- Footer bottom -->
     <div class="footer-bottom">
       <div class="container">
         <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
           <p class="mb-0">&copy; <span id="footer-year"></span> TransHub. All Rights Reserved.</p>
-          <p class="mb-0">Designed &amp; Developed by <a href="#">Wcode - programy</a></p>
+          <p class="mb-0">Designed &amp; Developed by <a href="#" rel="noopener noreferrer">Theme Village</a></p>
         </div>
       </div>
     </div>
@@ -606,22 +758,18 @@
   </footer>
 
   <!-- Back to top button -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="fa-solid fa-arrow-up"></i>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top of page">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
   </button>
 
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <!-- Bootstrap JS -->
-  <script src="./assets/js/bootstrap.bundle.js"></script>
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- Jarallax (parallax) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/2.2.0/jarallax.min.js"></script>
-  <!-- Typed.js (efeito de digitação) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
-  <!-- App JS -->
-  <script src="./assets/js/app.js"></script>
+  <!-- ===================== SCRIPTS — todos com defer para não bloquear render ===================== -->
+  <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script defer src="./assets/js/bootstrap.bundle.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/2.2.0/jarallax.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+  <script defer src="./assets/js/app.js"></script>
+
 </body>
 
 </html>

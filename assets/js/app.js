@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-  if (document.getElementById('element')) {
+  // =========================================
+  // Typed.js — efeito de digitação no banner
+  // =========================================
+  if (typeof Typed !== 'undefined' && document.getElementById('element')) {
     new Typed('#element', {
       strings: [
         'Air Freight',
@@ -19,22 +22,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (typeof jarallax !== 'undefined') {
-    jarallax(document.querySelectorAll('.jarallax'), {
-      speed: 0.5,
-    });
+  // =========================================
+  // Jarallax — parallax (respeita prefers-reduced-motion)
+  // =========================================
+  const prefersReducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)',
+  ).matches;
+
+  if (!prefersReducedMotion && typeof jarallax !== 'undefined') {
+    jarallax(document.querySelectorAll('.jarallax'), { speed: 0.5 });
   }
 
+  // =========================================
+  // Swiper — slider de demos (home-area)
+  // =========================================
   if (typeof Swiper !== 'undefined' && document.querySelector('.home-swiper')) {
     new Swiper('.home-swiper', {
       slidesPerView: 1,
       spaceBetween: 24,
       loop: true,
-      autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
+      autoplay: prefersReducedMotion
+        ? false
+        : { delay: 3500, disableOnInteraction: false, pauseOnMouseEnter: true },
       pagination: {
         el: '.home-swiper .swiper-pagination',
         clickable: true,
@@ -42,6 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
       navigation: {
         nextEl: '.home-swiper .swiper-button-next',
         prevEl: '.home-swiper .swiper-button-prev',
+      },
+      a11y: {
+        prevSlideMessage: 'Previous slide',
+        nextSlideMessage: 'Next slide',
       },
       breakpoints: {
         576: { slidesPerView: 1 },
@@ -51,13 +64,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // =========================================
+  // Navbar — sombra ao fazer scroll
+  // =========================================
   const navbar = document.querySelector('.navbar');
-  if (navbar) {
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
+
+  // =========================================
+  // Back to top button
+  // =========================================
+  const backToTop = document.getElementById('backToTop');
+
+  // Single scroll listener for both navbar + back-to-top (avoids two listeners)
+  window.addEventListener(
+    'scroll',
+    () => {
+      const y = window.scrollY;
+      if (navbar) navbar.classList.toggle('scrolled', y > 50);
+      if (backToTop) backToTop.classList.toggle('visible', y > 400);
+    },
+    { passive: true },
+  );
+
+  if (backToTop) {
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: prefersReducedMotion ? 'auto' : 'smooth',
+      });
     });
   }
 
+  // =========================================
+  // Custom nav toggler — clip-path circle reveal
+  // =========================================
   const toggler = document.getElementById('navToggler');
   const navMenu = document.getElementById('navbarNav');
 
@@ -65,24 +104,26 @@ document.addEventListener('DOMContentLoaded', () => {
     navMenu.classList.remove('is-open');
     toggler.classList.remove('is-open');
     toggler.setAttribute('aria-expanded', 'false');
+    toggler.setAttribute('aria-label', 'Open navigation menu');
     document.body.style.overflow = '';
   };
 
   if (toggler && navMenu) {
-    // Open / close on button click
     toggler.addEventListener('click', () => {
       const isOpen = navMenu.classList.toggle('is-open');
       toggler.classList.toggle('is-open', isOpen);
-      toggler.setAttribute('aria-expanded', isOpen);
+      toggler.setAttribute('aria-expanded', String(isOpen));
+      toggler.setAttribute(
+        'aria-label',
+        isOpen ? 'Close navigation menu' : 'Open navigation menu',
+      );
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
-    // Close when a nav link is clicked
     navMenu.querySelectorAll('.nav-link').forEach((link) => {
       link.addEventListener('click', closeMenu);
     });
 
-    // Close on Escape key
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && navMenu.classList.contains('is-open')) {
         closeMenu();
@@ -90,7 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Close when clicking outside the nav on mobile
     document.addEventListener('click', (e) => {
       if (
         navMenu.classList.contains('is-open') &&
@@ -103,14 +143,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================
-  // AOS — animações ao scroll (inner-pages)
+  // AOS — animações ao scroll
   // =========================================
   if (typeof AOS !== 'undefined') {
     AOS.init({
-      duration: 600,
+      duration: prefersReducedMotion ? 0 : 600,
       easing: 'ease-out-quad',
       once: true,
       offset: 60,
+      disable: prefersReducedMotion,
     });
   }
 
@@ -135,19 +176,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const counters = document.querySelectorAll('.stat-number');
   if (counters.length) {
-    const counterObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !entry.target.dataset.animated) {
-            entry.target.dataset.animated = 'true';
-            animateCounter(entry.target);
-          }
-        });
-      },
-      { threshold: 0.4 },
-    );
-
-    counters.forEach((counter) => counterObserver.observe(counter));
+    if (prefersReducedMotion) {
+      // Immediately set final values — no animation
+      counters.forEach((el) => {
+        el.textContent = el.getAttribute('data-count');
+      });
+    } else {
+      const counterObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !entry.target.dataset.animated) {
+              entry.target.dataset.animated = 'true';
+              animateCounter(entry.target);
+            }
+          });
+        },
+        { threshold: 0.4 },
+      );
+      counters.forEach((counter) => counterObserver.observe(counter));
+    }
   }
 
   // =========================================
@@ -157,28 +204,22 @@ document.addEventListener('DOMContentLoaded', () => {
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   // =========================================
-  // Back to top button
-  // =========================================
-  const backToTop = document.getElementById('backToTop');
-  if (backToTop) {
-    window.addEventListener('scroll', () => {
-      backToTop.classList.toggle('visible', window.scrollY > 400);
-    });
-
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
-
-  // =========================================
   // Scroll suave para âncoras internas
   // =========================================
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', (e) => {
-      const target = document.querySelector(anchor.getAttribute('href'));
+      const href = anchor.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        target.scrollIntoView({
+          behavior: prefersReducedMotion ? 'auto' : 'smooth',
+          block: 'start',
+        });
+        // Move focus to target for keyboard accessibility
+        target.setAttribute('tabindex', '-1');
+        target.focus({ preventScroll: true });
       }
     });
   });
